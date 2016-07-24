@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body ng-controller="ctrl">
+    <div class="container">
+        <div class="left">
+            <div class="title">
+                <a href="">iCloud</a>
+                <div class="add" ng-click="add()">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="list">
+                <li ng-repeat="v in todo" ng-click="select($index)" ng-style="{background:$index==index?'#2D2D2B':''}">
+                    <span ng-style="{background:v.color}"></span>
+                    <h4>{{v.title}}</h4>
+                </li>
+            </ul>    
+        </div>
+        <div class="right">
+            <div class="head">
+                <div>
+                    <span></span>
+                    <input type="search"  placeholder="搜索所有提醒">
+                </div>               
+            </div>
+            <div class="list">
+                <div class="title">
+                    <h4 ng-style="{color:todo[index].color}">{{todo[index].title}}</h4>
+                    <span ng-style="{color:todo[index].color}" class="btn" ng-click="f=!f">选项</span>
+					<div class="xx" ng-show="f">
+						<div class="xx-c">
+							<input type="text" ng-model="todo[index].title" ng-style="{color:color[index%7]}">
+							<h3>列表颜色</h3>
+							<ul>
+								<li ng-repeat="c in color" ng-style="{'background-color':c,'border-color':$index==$index?c:rgba(0,0,0,0)}" ng-click="changcolor($index)"></li>
+							</ul>
+						</div>
+						<div class="xx-b">
+							<span>删除</span>
+							<span ng-click="overcolor(index)">完成</span>
+							<span>取消</span>
+						</div>
+					</div>
+                </div>
+                
+                <div class="content">
+                    <div class="com">
+                        <div class="h">
+                            <span ng-click="flag=!flag" ng-class="{true:'span1',false:'span2'}[flag]"></span>
+                            <div>{{getnum(index)}}已完成 : <i>{{num}}</i> 项</div>
+                        </div>
+                         <ul>
+                            <li ng-hide="flag" ng-repeat="v in todo[index].list|filter:true">
+                                <span style="display:inline-block;width:14px;height:14px;border-radius:50%;" ng-style="{'border-color':color[(index)%7],'background-color':color[(index)%7]}" ng-click="done(v,false)"></span>
+                                <input type="text" contenteditable ng-model="v.con">
+                            </li>
+                        </ul>
+                        <ul>
+                            <li ng-repeat="v in todo[index].list|filter:false">
+                                <span style="display:inline-block;width:14px;height:14px;border-radius:50%;" ng-style="{'border-color':color[(index)%7],'background-color':rgba(0,0,0,0)}" ng-click="doing(v,true)"></span>
+                                <input type="text" contenteditable ng-model="v.con">
+                            </li>
+                        </ul>
+                        <div class="x" ng-click="addxm(index)">新项目...</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

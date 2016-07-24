@@ -1,0 +1,329 @@
+body,ul,li,input,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding:0;
+  list-style: none;
+  font-family: "Arial",sans-serif;
+}
+body,html{
+  /*width: 100%;*/
+  height:100%;  
+}
+a{
+  text-decoration: none;
+}
+img{
+  border:0;
+}
+h4,span{
+  font-weight: normal;
+}
+.container{
+  height: 100%;
+  margin-left: 389px;
+  background: url(../image/1.png) repeat 0 0;
+}
+.left{
+  width: 389px;
+  height:100%;
+  margin-left: -389px;
+  background: #383836;
+  float: left;
+  overflow:hidden;
+}
+.left .title{
+  width: 100%;
+  height:44px;
+  overflow: hidden;
+  line-height: 44px; 
+  border-bottom: 1px solid #000;
+  box-sizing:border-box;
+}
+.left .title a{
+  display: block;
+  height:44px;
+  color: #fff;
+  font-size: 21px; 
+  line-height: 44px; 
+  float: left;
+  margin-left: 15px;
+}
+.left .title .add{
+  display: block;
+  width: 21px;
+  height:21px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 10px;
+  position: relative;
+  opacity: 0.6;
+}
+.left .title .add:hover{
+  opacity: 1;
+}
+.left .title .add span:nth-child(1){ 
+  width: 100%;
+  position:absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 1px solid #fff;
+}
+.left .title .add span:nth-child(2){ 
+  width: 100%;
+  position:absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 1px solid #fff;
+  transform:rotate(90deg);
+}
+.list{
+  height: auto;
+  /*overflow:hidden;*/
+}
+.list li{
+  width: 100%;
+  height: 45px; 
+  line-height: 45px;
+}
+.list li span{
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  float: left;
+  margin: 13px 15px;
+}
+.list li h4{
+  width: 340px;
+  height: 45px;
+  float: left;
+  color: #fff;
+  box-sizing:border-box;
+  border-bottom: 1px solid #2A2A28;
+}
+.right{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.right .head{
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+}
+.right .head div{ 
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+.right .head div span{ 
+  width: 23px;
+  height: 23px;
+  float: left;
+  z-index: 11;
+  margin: 10px 15px;
+  background: url(../image/2.png) no-repeat -138px -359px;
+}
+.right .head div input{ 
+  height: 100%;
+  float: left;
+  border:0;
+  font-size: 20px;
+  background:transparent;
+  outline: none;
+}
+.right .list{
+  height: auto;
+  padding-left: 25px;
+
+}
+.right .list .title{
+  height: 80px;
+  border-bottom: 1px solid #ddd;
+  padding-right: 25px;
+  position: relative;
+}
+.right .list .title h4{
+  height: 100%;
+  font-size: 35px;
+  float: left;
+  display: inline-block;
+  margin: 0;
+  line-height: 100px;
+}
+.right .list .title span{
+  height: 100%;
+  font-size: 20px;
+  float: right;
+  display: inline-block;
+  margin: 0;
+  line-height: 100px;
+  font-weight:400;
+}
+.right .list .title .xx{
+  height: 225px;
+  width:355px;
+  position: absolute;
+  right: 80px;
+  top: -35px;
+  background: #fff;
+  border:1px solid #ccc;
+  box-shadow: 2px 2px 10px #ccc;
+  padding: 5px;
+  border-radius: 8px;
+}
+.right .list .title .xx .xx-c{
+  height: 175px;
+  width:100%;
+  border:1px solid #ddd;
+  padding: 15px;
+  box-sizing:border-box;
+}
+.right .list .title .xx .xx-c input{
+  height: 40px;
+  width:100%;
+  border:1px solid #ddd;
+  font-size: 24px;
+  padding-left: 10px;
+}
+.right .list .title .xx .xx-c h3{
+  height: 40px;
+  width:100%;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.right .list .title .xx .xx-c ul{
+  height: 60px;
+  width:100%;
+}
+.right .list .title .xx .xx-c ul li{
+  height: 17px;
+  width:17px;
+  float: left;
+  padding: 3px;
+  border-radius: 50%;
+  border: 2px solid red;
+  background-clip:content-box;
+  margin-right: 10px;
+}
+.right .list .title .xx .xx-b{
+  height: 50px;
+  width:100%;
+  border:1px solid #ddd;
+  border-top:none;
+  padding: 5px 15px;
+  box-sizing:border-box;
+}
+.right .list .title .xx .xx-b span{
+  display: inline-block;
+  width: 70px;
+  font-size: 20px;
+  color: #007AFF;
+  float: left;
+  line-height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.right .list .title .xx .xx-b span:nth-child(1){
+  display: inline-block;
+  font-size: 20px;
+  color: red;
+  float: left;
+  line-height: 40px;
+}
+.right .list .title .xx .xx-b span:nth-child(2){
+  display: inline-block;
+  font-size: 20px;
+  float: right;
+  line-height: 40px; 
+  font-weight: 700;
+  
+}
+.right .list .title .xx .xx-b span:nth-child(3){
+  display: inline-block;
+  font-size: 20px;
+  float: right;
+  line-height: 40px;
+  border-right: 1px solid #ccc; 
+}
+.right .list .content{
+  height: auto;
+}
+.right .list .content .com{
+  height: 100%;
+}
+.right .list .content .com .h{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+.right .list .content .com .h .span1{
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background: url(../image/2.png) no-repeat -25px -526px;
+  transform:rotate(-90deg);
+  cursor: pointer;
+}
+.right .list .content .com .h .span2{
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background: url(../image/2.png) no-repeat -25px -526px;
+  transform:rotate(0deg);
+  cursor: pointer;
+}
+.right .list .content .com .h div{
+  float: left;
+  font-size: 20px;
+  color: #A1A1A1;
+  line-height: 50px;
+}
+.right .list .content .com .h div i{
+  font-size: 20px;
+  color: #A1A1A1;
+  line-height: 50px;
+  font-style: normal;
+}
+.right .list .content .com ul{
+  height: auto;
+  width: 100%;
+}
+.right .list .content .com ul li{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #A1A1A1;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+.right .list .content .com ul li span{
+  float: left;
+  border: 2px solid red;
+  margin: 15px 15px;
+  padding: 4px;
+  background-clip: content-box;
+}
+.right .list .content .com ul li input{
+  width: 94%;
+  height: 50px;
+  float: left;
+  border:0;
+  outline: 0;
+  font-size: 20px;
+  color: #777;
+  background: transparent;
+}
+.right .list .content .x{
+  margin-left: 50px;
+  color: #A1A1A1;
+  line-height: 50px;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+}
